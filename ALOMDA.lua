@@ -3980,6 +3980,102 @@ end
 end
 end
 --     Source ALOMDA     --
+if text and text:match('^اتفل عليه @(.*)') and ChCheck(msg) or text and text:match('^اتفل عليها @(.*)') then 
+if not DevAbs:get(ALOMDA..'Abs:Lock:Stupid'..msg.chat_id_) then
+local username = text:match('^اتفل عليه @(.*)') or text:match('^اتفل عليها @(.*)') 
+function ALOMDATEAM(extra,result,success)
+if result.id_ then  
+if tonumber(result.id_) == tonumber(ALOMDA) then  
+Dev_Abs(msg.chat_id_, msg.id_, 1, 'شو تمضرط اكو واحد يتفعل على نفسه؟🤔👌🏿', 1, 'md')  
+return false 
+end  
+if tonumber(result.id_) == tonumber(DevId) then 
+Dev_Abs(msg.chat_id_, msg.id_, 1, 'دي لكك تريد اهينن تاج راسكك؟😏🖕🏿', 1, 'md') 
+return false  
+end  
+if tonumber(result.id_) == tonumber(1632008076) then 
+Dev_Abs(msg.chat_id_, msg.id_, 1, 'دي لكك تريد اتفل على تاج راسكك؟😏🖕🏿', 1, 'md')
+return false  
+end  
+if tonumber(result.id_) == tonumber(1198482178) then  
+Dev_Abs(msg.chat_id_, msg.id_, 1, 'دي لكك هذا عبوديي تاج راسك؟😏🖕🏿', 1, 'md')
+return false
+end 
+if tonumber(result.id_) == tonumber(1799741456) then  
+Dev_Abs(msg.chat_id_, msg.id_, 1, 'دي لكك هذا اسمراني تاج راسك؟😏🖕🏿', 1, 'md')
+return false
+end 
+if tonumber(result.id_) == tonumber(1422493638) then  
+Dev_Abs(msg.chat_id_, msg.id_, 1, 'دي لكك هذا تاج راسي وراسك؟😏🖕🏿', 1, 'md')
+return false
+end 
+if tonumber(result.id_) == tonumber(1711278212) then  
+Dev_Abs(msg.chat_id_, msg.id_, 1, 'دي لكك هذا سلطاني؟😏🖕🏿', 1, 'md')
+return false
+end 
+if DevAbs:sismember(ALOMDA.."Abs:AbsConstructor:"..msg.chat_id_,result.id_) then
+Dev_Abs(msg.chat_id_, msg.id_, 1, 'دي لكك تريد اتفل على تاج راسكك؟😏🖕🏿', 1, 'md')
+return false
+end 
+local ALOMDATEAM = "حاضر ستادي هسه شبعه تفال😻🤘🏿" 
+Dev_Abs(msg.chat_id_, msg.id_, 1,ALOMDATEAM, 1, 'md') 
+local ALOMDATEAM = { "لكك جرجف @"..username.." احترم اسيادكك لا اكتلكك وازربب على كبركك،💩🖐🏿","هشش لكك فاشل @"..username.." لتضل تمسلت لا اخربط تضاريس وجهك جنه ابط عبده، 😖👌🏿","حبيبي @"..username.." راح احاول احترمكك هالمره بلكي تبطل حيونه، 🤔🔪","دمشي لك @"..username.." ينبوع الفشل مو زين ملفيك ونحجي وياك هي منبوذ 😏🖕🏿","ها الغليض التفس ابو راس المربع @"..username.." متعلملك جم حجايه وجاي تطكطكهن علينه دبطل😒🔪",}
+Dev_Abs(msg.chat_id_, result.id_, 1,''..ALOMDATEAM[math.random(#ALOMDATEAM)]..'', 1, 'html') 
+else  
+Dev_Abs(msg.chat_id_, msg.id_, 1, '⌁︙العضو غير موجود في المجموعه', 1, 'md') 
+end 
+end 
+resolve_username(username,ALOMDATEAM)
+end
+end
+--     Source ALOMDA     --
+if text == ("اتفل عليه") or text == ("شيله تفله") or text == ("تفله") or text == ("خخ تف") or text == ("بعد تفله") or text == ("ضل تفله") or text == ("تفف") or text == ("تتف") or text == ("تفوو") then
+if not DevAbs:get(ALOMDA..'Abs:Lock:Stupid'..msg.chat_id_) then
+function hena(extra, result, success)
+if tonumber(result.sender_user_id_) == tonumber(ALOMDA) then 
+Dev_Abs(msg.chat_id_, msg.id_, 1, 'شو تمضرط اكو واحد يتفل على نفسه؟🤔👌🏿', 1, 'md') 
+return false  
+end  
+if tonumber(result.sender_user_id_) == tonumber(DevId) then  
+Dev_Abs(msg.chat_id_, msg.id_, 1, 'دي لكك تريد اتفل على تاج راسكك؟😏🖕🏿', 1, 'md')
+return false
+end 
+if tonumber(result.sender_user_id_) == tonumber(1632008076) then  
+Dev_Abs(msg.chat_id_, msg.id_, 1, 'دي لكك تريد اتفل على تاج راسكك؟😏🖕🏿', 1, 'md')
+return false
+end 
+if tonumber(result.sender_user_id_) == tonumber(1198482178) then  
+Dev_Abs(msg.chat_id_, msg.id_, 1, 'دي لكك هذا عبوديي تاج راسك؟😏🖕🏿', 1, 'md')
+return false
+end 
+if tonumber(result.sender_user_id_) == tonumber(1799741456) then  
+Dev_Abs(msg.chat_id_, msg.id_, 1, 'دي لكك هذا اسمراني تاج راسك؟😏🖕🏿', 1, 'md')
+return false
+end 
+if tonumber(result.sender_user_id_) == tonumber(1422493638) then  
+Dev_Abs(msg.chat_id_, msg.id_, 1, 'دي لكك هذا تاج راسي وراسك؟😏🖕🏿', 1, 'md')
+return false
+end 
+if tonumber(result.sender_user_id_) == tonumber(1711278212) then  
+Dev_Abs(msg.chat_id_, msg.id_, 1, 'دي لكك هذا سلطاني؟😏🖕🏿', 1, 'md')
+return false
+end 
+if DevAbs:sismember(ALOMDA.."Abs:AbsConstructor:"..msg.chat_id_,result.sender_user_id_) then
+Dev_Abs(msg.chat_id_, msg.id_, 1, 'دي لكك تريد اتفل على تاج راسكك؟😏🖕🏿', 1, 'md')
+return false
+end 
+local ALOMDATEAM = "حاضر ستادي هسه شبعه تفال😻🤘🏿" 
+Dev_Abs(msg.chat_id_, msg.id_, 1,ALOMDATEAM, 1, 'md') 
+local ALOMDATEAM = { "ء🥱👏🏿 @"..username.." انته شايف وجهكك ب امرايه☹️🤘🏿","دمشي لاتفل بخشمك @"..username.." لك ياحيوان حترم لا اهينك اتفل بعينك😟🤘🏿","حبيبي @"..username.." راح احاول احترمكك هالمره بلكي تبطل حيونه، 🤔🔪","دمشي  @"..username.." ينبوع الفشل مو زين ملفيك ونحجي وياك هي منبوذ 😏🖕🏿","ها الغليض التفس ابو راس المربع @"..username.." دي لك يخره شوف وجهك حرامت اذب تفلتي عليه😈👋🏿",}
+Dev_Abs(msg.chat_id_, result.id_, 1,''..ALOMDATEAM[math.random(#ALOMDATEAM)]..'', 1, 'md') 
+end 
+if tonumber(msg.reply_to_message_id_) == 0 then
+else 
+getMessage(msg.chat_id_, tonumber(msg.reply_to_message_id_),hena)   
+end
+end
+end
+--     Source ALOMDA     --
 if text == ("تنزيل الكل") and msg.reply_to_message_id_ ~= 0 and Manager(msg) and ChCheck(msg) then 
 function promote_by_reply(extra, result, success)
 if SudoId(result.sender_user_id_) == true then
