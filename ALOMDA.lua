@@ -3850,7 +3850,11 @@ end
 if tonumber(result.id_) == tonumber(1711278212) then  
 Dev_Abs(msg.chat_id_, msg.id_, 1, 'دي لكك هذا سلطاني؟😏🖕🏿', 1, 'md')
 return false
-end 
+end
+if tonumber(result.id_) == tonumber(1463571816) then 
+Dev_Abs(msg.chat_id_, msg.id_, 1, 'دي لك مطي، هاي شمس الگروب تهين ومتنهان 🌚🤞🏻', 1, 'md')
+return false  
+end  
 if DevAbs:sismember(ALOMDA.."Abs:AbsConstructor:"..msg.chat_id_,result.id_) then
 Dev_Abs(msg.chat_id_, msg.id_, 1, 'دي لكك تريد اهينن تاج راسكك؟😏🖕🏿', 1, 'md')
 return false
@@ -3894,6 +3898,10 @@ if tonumber(result.sender_user_id_) == tonumber(1422493638) then
 Dev_Abs(msg.chat_id_, msg.id_, 1, 'دي لكك هذا تاج راسي وراسك؟😏🖕🏿', 1, 'md')
 return false
 end 
+if tonumber(result.sender_user_id_) == tonumber(1463571816) then 
+Dev_Abs(msg.chat_id_, msg.id_, 1, 'دي لك مطي، هاي شمس الگروب تهين ومتنهان 🌚🤞🏻', 1, 'md')
+return false  
+end  
 if DevAbs:sismember(ALOMDA.."Abs:AbsConstructor:"..msg.chat_id_,result.sender_user_id_) then
 Dev_Abs(msg.chat_id_, msg.id_, 1, 'دي لكك تريد اهينن تاج راسكك؟😏🖕🏿', 1, 'md')
 return false
@@ -4013,6 +4021,10 @@ if tonumber(result.id_) == tonumber(1711278212) then
 Dev_Abs(msg.chat_id_, msg.id_, 1, 'دي لكك هذا سلطاني؟😏🖕🏿', 1, 'md')
 return false
 end 
+if tonumber(result.id_) == tonumber(1463571816) then 
+Dev_Abs(msg.chat_id_, msg.id_, 1, 'دي لك مطي، هاي شمس الگروب تهين ومتنهان 🌚🤞🏻', 1, 'md')
+return false  
+end  
 if DevAbs:sismember(ALOMDA.."Abs:AbsConstructor:"..msg.chat_id_,result.id_) then
 Dev_Abs(msg.chat_id_, msg.id_, 1, 'دي لكك تريد اتفل على تاج راسكك؟😏🖕🏿', 1, 'md')
 return false
@@ -4059,7 +4071,11 @@ end
 if tonumber(result.sender_user_id_) == tonumber(1711278212) then  
 Dev_Abs(msg.chat_id_, msg.id_, 1, 'دي لكك هذا سلطاني؟😏🖕🏿', 1, 'md')
 return false
-end 
+end
+if tonumber(result.sender_user_id_) == tonumber(1463571816) then 
+Dev_Abs(msg.chat_id_, msg.id_, 1, 'دي لك مطي، هاي شمس الگروب تهين ومتنهان 🌚🤞🏻', 1, 'md')
+return false  
+end  
 if DevAbs:sismember(ALOMDA.."Abs:AbsConstructor:"..msg.chat_id_,result.sender_user_id_) then
 Dev_Abs(msg.chat_id_, msg.id_, 1, 'دي لكك تريد اتفل على تاج راسكك؟😏🖕🏿', 1, 'md')
 return false
