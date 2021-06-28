@@ -7093,6 +7093,7 @@ else
 Dev_Abs(msg.chat_id_, msg.id_, 1, "⌁︙لاتوجد ميديا هنا", 1, 'md') 
 end end 
 end
+end
 --     Source ALOMDA     --
 if Admin(msg) then
 if text == "تنظيف تعديل" or text == "تنظيف التعديل" and SourceCh(msg) then   
