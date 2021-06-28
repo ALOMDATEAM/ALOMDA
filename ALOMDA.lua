@@ -1734,33 +1734,12 @@ return false
 end
 DevAbs:del(ALOMDA..'Abs:Add:GpRed'..msg.sender_user_id_..''..msg.chat_id_..'')
 local SaveGpRed = DevAbs:get(ALOMDA..'Abs:Add:GpText'..msg.sender_user_id_..''..msg.chat_id_..'')
-if msg.content_.video_ then DevAbs:set(ALOMDA..'Abs:Video:GpRed'..SaveGpRed..''..msg.chat_id_..'', msg.content_.video_.video_.persistent_id_)
-end
 if msg.content_.document_ then DevAbs:set(ALOMDA..'Abs:File:GpRed'..SaveGpRed..''..msg.chat_id_..'', msg.content_.document_.document_.persistent_id_)
 end
-if msg.content_.sticker_ then DevAbs:set(ALOMDA..'Abs:Stecker:GpRed'..SaveGpRed..''..msg.chat_id_..'', msg.content_.sticker_.sticker_.persistent_id_) 
-end 
 if msg.content_.voice_ then DevAbs:set(ALOMDA..'Abs:Voice:GpRed'..SaveGpRed..''..msg.chat_id_..'', msg.content_.voice_.voice_.persistent_id_) 
 end
 if msg.content_.audio_ then DevAbs:set(ALOMDA..'Abs:Audio:GpRed'..SaveGpRed..''..msg.chat_id_..'', msg.content_.audio_.audio_.persistent_id_) 
 end
-if msg.content_.photo_ then
-if msg.content_.photo_.sizes_[0] then
-photo_in_group = msg.content_.photo_.sizes_[0].photo_.persistent_id_
-end
-if msg.content_.photo_.sizes_[1] then
-photo_in_group = msg.content_.photo_.sizes_[1].photo_.persistent_id_
-end
-if msg.content_.photo_.sizes_[2] then
-photo_in_group = msg.content_.photo_.sizes_[2].photo_.persistent_id_
-end	
-if msg.content_.photo_.sizes_[3] then
-photo_in_group = msg.content_.photo_.sizes_[3].photo_.persistent_id_
-end
-DevAbs:set(ALOMDA..'Abs:Photo:GpRed'..SaveGpRed..''..msg.chat_id_..'', photo_in_group) 
-end
-if msg.content_.animation_ then DevAbs:set(ALOMDA..'Abs:Gif:GpRed'..SaveGpRed..''..msg.chat_id_..'', msg.content_.animation_.animation_.persistent_id_) 
-end 
 if msg.content_.text_ then
 DevAbs:set(ALOMDA..'Abs:Text:GpRed'..SaveGpRed..''..msg.chat_id_..'', msg.content_.text_)
 end 
