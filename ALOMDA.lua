@@ -7046,6 +7046,28 @@ local ALOMDATEAM = '⌁︙اهلا عزيزي ↫ '..AbsRank(msg)..' \n⌁︙ت�
 absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, ALOMDATEAM, 14, string.len(msg.sender_user_id_))
 DevAbs:del(ALOMDA..'Abs:Lock:Clean'..msg.chat_id_) 
 end
+if text and (text:match("^تعين عدد المسح (%d+)$") or text:match("^تعيين عدد المسح (%d+)$") or text:match("^تعين عدد الحذف (%d+)$") or text:match("^تعيين عدد الحذف (%d+)$")) and Constructor(msg) then   
+local Num = text:match("تعين عدد المسح (%d+)$") or text:match("تعيين عدد المسح (%d+)$") or text:match("تعين عدد الحذف (%d+)$") or text:match("تعيين عدد الحذف (%d+)$")
+if tonumber(Num) < 50 or tonumber(Num) > 200 then
+Dev_Abs(msg.chat_id_, msg.id_, 1, '⌁︙قم بتحديد عدد اكبر من 50 واصغر من 200 للحذف التلقائي', 1, 'md')
+else
+Dev_Abs(msg.chat_id_, msg.id_, 1, '⌁︙تم وضع ↫ *'..Num..'* من الميديا للحذف التلقائي', 1, 'md')
+DevAbs:set(ALOMDA..'Abs:CleanNum'..msg.chat_id_,Num) 
+end end 
+if msg and DevAbs:get(ALOMDA..'Abs:Lock:Clean'..msg.chat_id_) then
+if DevAbs:get(ALOMDA..'Abs:CleanNum'..msg.chat_id_) then CleanNum = DevAbs:get(ALOMDA..'Abs:CleanNum'..msg.chat_id_) else CleanNum = 200 end
+if DevAbs:scard(ALOMDA.."Abs:cleaner"..msg.chat_id_) >= tonumber(CleanNum) then 
+local List = DevAbs:smembers(ALOMDA.."Abs:cleaner"..msg.chat_id_)
+local Del = 0
+for k,v in pairs(List) do
+Del = (Del + 1)
+local Message = v
+DeleteMessage(msg.chat_id_,{[0]=Message})
+end
+SendText(msg.chat_id_,"⌁︙تم حذف "..Del.." من الميديا تلقائيا",0,'md') 
+DevAbs:del(ALOMDA.."Abs:cleaner"..msg.chat_id_)
+end 
+end
 if Cleaner(msg) then
 if DevAbs:get(ALOMDA..'Abs:Lock:Clean'..msg.chat_id_) then 
 if text == "الميديا" and SourceCh(msg) or text == "عدد الميديا" and SourceCh(msg) then 
@@ -7070,7 +7092,6 @@ DevAbs:del(ALOMDA.."Abs:cleaner"..msg.chat_id_)
 else
 Dev_Abs(msg.chat_id_, msg.id_, 1, "⌁︙لاتوجد ميديا هنا", 1, 'md') 
 end end 
-end
 end
 --     Source ALOMDA     --
 if Admin(msg) then
