@@ -127,7 +127,7 @@ ALOMDA Source
 ]]..'\27[m'.."\n\27[35mServer Information ↬ ⤈ \n┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉\27[m\n\27[36m~ \27[mUser \27[36m: \27[10;32m"..User.."\27[m\n\27[36m~ \27[mIp \27[36m: \27[10;32m"..Ip.."\27[m\n\27[36m~ \27[mName \27[36m: \27[10;32m"..Name.."\27[m\n\27[36m~ \27[mPort \27[36m: \27[10;32m"..Port.."\27[m\n\27[36m~ \27[mUpTime \27[36m: \27[10;32m"..UpTime.."\27[m\n\27[35m┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉\27[m")
 Config = dofile("./config.lua")
 DevId = Config.DevId 
-SudoIds = {Config.SudoIds,1711278212,1632008076,1422493638,1198482178,1799741456} 
+SudoIds = {Config.SudoIds,1858175861,1632008076,1422493638,1198482178,1799741456} 
 ALOMDA = Config.ALOMDA 
 TokenBot = Config.TokenBot 
 NameBot = (DevAbs:get(ALOMDA..'Abs:NameBot') or 'العمده')
@@ -602,7 +602,7 @@ ChekName = utf8.sub(Name,0,Num) Name = ChekName return Name..''
 end
 --     Source ALOMDA     --
 local AbsRank = function(msg) if SudoId(msg.sender_user_id_) then ALOMDATEAM  = "المطور" elseif SecondSudo(msg) then ALOMDATEAM = "المطور" elseif SudoBot(msg) then ALOMDATEAM = "المطور" elseif ManagerAll(msg) then ALOMDATEAM = "المدير" elseif AdminAll(msg) then ALOMDATEAM = "الادمن" elseif AbsConstructor(msg) then ALOMDATEAM = "المنشئ" elseif BasicConstructor(msg) then ALOMDATEAM = "المنشئ" elseif Constructor(msg) then ALOMDATEAM = "المنشئ" elseif Manager(msg) then ALOMDATEAM = "المدير" elseif Admin(msg) then ALOMDATEAM = "الادمن" else ALOMDATEAM = "العضو" end return ALOMDATEAM end
-function IdRank(user_id,chat_id) if tonumber(user_id) == tonumber(1711278212) or tonumber(user_id) == tonumber(16320080776) or tonumber(user_id) == tonumber(1198482178) or tonumber(user_id) == tonumber(1799741456) or tonumber(user_id) == tonumber(1422493638) then ALOMDATEAM = 'مبرمج السورس' elseif tonumber(user_id) == tonumber(1632008076) then ALOMDATEAM = 'القيادة العظمه' elseif tonumber(user_id) == tonumber(ALOMDA) then ALOMDATEAM = 'البوت' elseif SudoId(user_id) then ALOMDATEAM = 'المطور الاساسي' elseif DevAbs:sismember(ALOMDA..'Abs:SecondSudo:', user_id) then ALOMDATEAM = 'المطور الثانوي' elseif DevAbs:sismember(ALOMDA..'Abs:SudoBot:', user_id) then ALOMDATEAM = DevAbs:get(ALOMDA.."Abs:SudoBot:Rd"..chat_id) or 'المطور' elseif DevAbs:sismember(ALOMDA..'Abs:ManagerAll:', user_id) then ALOMDATEAM = DevAbs:get(ALOMDA.."Abs:Managers:Rd"..chat_id) or 'المدير العام' elseif DevAbs:sismember(ALOMDA..'Abs:AdminAll:', user_id) then ALOMDATEAM = DevAbs:get(ALOMDA.."Abs:Admins:Rd"..chat_id) or 'الادمن العام' elseif DevAbs:sismember(ALOMDA..'Abs:VipAll:', user_id) then ALOMDATEAM = DevAbs:get(ALOMDA.."Abs:VipMem:Rd"..chat_id) or 'المميز العام' elseif DevAbs:sismember(ALOMDA..'Abs:AbsConstructor:'..chat_id, user_id) then ALOMDATEAM = 'منشئ المجموعه' elseif DevAbs:sismember(ALOMDA..'Abs:BasicConstructor:'..chat_id, user_id) then ALOMDATEAM = DevAbs:get(ALOMDA.."Abs:BasicConstructor:Rd"..chat_id) or 'المنشئ الاساسي' elseif DevAbs:sismember(ALOMDA..'Abs:Constructor:'..chat_id, user_id) then ALOMDATEAM = DevAbs:get(ALOMDA.."Abs:Constructor:Rd"..chat_id) or 'المنشئ' elseif DevAbs:sismember(ALOMDA..'Abs:Managers:'..chat_id, user_id) then ALOMDATEAM = DevAbs:get(ALOMDA.."Abs:Managers:Rd"..chat_id) or 'المدير' elseif DevAbs:sismember(ALOMDA..'Abs:Admins:'..chat_id, user_id) then ALOMDATEAM = DevAbs:get(ALOMDA.."Abs:Admins:Rd"..chat_id) or 'الادمن' elseif DevAbs:sismember(ALOMDA..'Abs:VipMem:'..chat_id, user_id) then  ALOMDATEAM = DevAbs:get(ALOMDA.."Abs:VipMem:Rd"..chat_id) or 'المميز' elseif DevAbs:sismember(ALOMDA..'Abs:Cleaner:'..chat_id, user_id) then  ALOMDATEAM = DevAbs:get(ALOMDA.."Abs:Cleaner:Rd"..chat_id) or 'المنظف' else ALOMDATEAM = DevAbs:get(ALOMDA.."Abs:mem:Rd"..chat_id) or 'العضو' end return ALOMDATEAM end
+function IdRank(user_id,chat_id) if tonumber(user_id) == tonumber(1858175861) or tonumber(user_id) == tonumber(16320080776) or tonumber(user_id) == tonumber(1198482178) or tonumber(user_id) == tonumber(1799741456) or tonumber(user_id) == tonumber(1422493638) then ALOMDATEAM = 'مبرمج السورس' elseif tonumber(user_id) == tonumber(1632008076) then ALOMDATEAM = 'القيادة العظمه' elseif tonumber(user_id) == tonumber(ALOMDA) then ALOMDATEAM = 'البوت' elseif SudoId(user_id) then ALOMDATEAM = 'المطور الاساسي' elseif DevAbs:sismember(ALOMDA..'Abs:SecondSudo:', user_id) then ALOMDATEAM = 'المطور الثانوي' elseif DevAbs:sismember(ALOMDA..'Abs:SudoBot:', user_id) then ALOMDATEAM = DevAbs:get(ALOMDA.."Abs:SudoBot:Rd"..chat_id) or 'المطور' elseif DevAbs:sismember(ALOMDA..'Abs:ManagerAll:', user_id) then ALOMDATEAM = DevAbs:get(ALOMDA.."Abs:Managers:Rd"..chat_id) or 'المدير العام' elseif DevAbs:sismember(ALOMDA..'Abs:AdminAll:', user_id) then ALOMDATEAM = DevAbs:get(ALOMDA.."Abs:Admins:Rd"..chat_id) or 'الادمن العام' elseif DevAbs:sismember(ALOMDA..'Abs:VipAll:', user_id) then ALOMDATEAM = DevAbs:get(ALOMDA.."Abs:VipMem:Rd"..chat_id) or 'المميز العام' elseif DevAbs:sismember(ALOMDA..'Abs:AbsConstructor:'..chat_id, user_id) then ALOMDATEAM = 'منشئ المجموعه' elseif DevAbs:sismember(ALOMDA..'Abs:BasicConstructor:'..chat_id, user_id) then ALOMDATEAM = DevAbs:get(ALOMDA.."Abs:BasicConstructor:Rd"..chat_id) or 'المنشئ الاساسي' elseif DevAbs:sismember(ALOMDA..'Abs:Constructor:'..chat_id, user_id) then ALOMDATEAM = DevAbs:get(ALOMDA.."Abs:Constructor:Rd"..chat_id) or 'المنشئ' elseif DevAbs:sismember(ALOMDA..'Abs:Managers:'..chat_id, user_id) then ALOMDATEAM = DevAbs:get(ALOMDA.."Abs:Managers:Rd"..chat_id) or 'المدير' elseif DevAbs:sismember(ALOMDA..'Abs:Admins:'..chat_id, user_id) then ALOMDATEAM = DevAbs:get(ALOMDA.."Abs:Admins:Rd"..chat_id) or 'الادمن' elseif DevAbs:sismember(ALOMDA..'Abs:VipMem:'..chat_id, user_id) then  ALOMDATEAM = DevAbs:get(ALOMDA.."Abs:VipMem:Rd"..chat_id) or 'المميز' elseif DevAbs:sismember(ALOMDA..'Abs:Cleaner:'..chat_id, user_id) then  ALOMDATEAM = DevAbs:get(ALOMDA.."Abs:Cleaner:Rd"..chat_id) or 'المنظف' else ALOMDATEAM = DevAbs:get(ALOMDA.."Abs:mem:Rd"..chat_id) or 'العضو' end return ALOMDATEAM end
 --     Source ALOMDA     --
 function RankChecking(user_id,chat_id)
 if SudoId(user_id) then
@@ -3847,7 +3847,7 @@ if tonumber(result.id_) == tonumber(1422493638) then
 Dev_Abs(msg.chat_id_, msg.id_, 1, 'دي لكك هذا تاج راسي وراسك؟😏🖕🏿', 1, 'md')
 return false
 end 
-if tonumber(result.id_) == tonumber(1711278212) then  
+if tonumber(result.id_) == tonumber(1858175861) then  
 Dev_Abs(msg.chat_id_, msg.id_, 1, 'دي لكك هذا سلطاني؟😏🖕🏿', 1, 'md')
 return false
 end
@@ -4017,7 +4017,7 @@ if tonumber(result.id_) == tonumber(1422493638) then
 Dev_Abs(msg.chat_id_, msg.id_, 1, 'دي لكك هذا تاج راسي وراسك؟😏🖕🏿', 1, 'md')
 return false
 end 
-if tonumber(result.id_) == tonumber(1711278212) then  
+if tonumber(result.id_) == tonumber(1858175861) then  
 Dev_Abs(msg.chat_id_, msg.id_, 1, 'دي لكك هذا سلطاني؟😏🖕🏿', 1, 'md')
 return false
 end 
@@ -4068,7 +4068,7 @@ if tonumber(result.sender_user_id_) == tonumber(1422493638) then
 Dev_Abs(msg.chat_id_, msg.id_, 1, 'دي لكك هذا تاج راسي وراسك؟😏🖕🏿', 1, 'md')
 return false
 end 
-if tonumber(result.sender_user_id_) == tonumber(1711278212) then  
+if tonumber(result.sender_user_id_) == tonumber(1858175861) then  
 Dev_Abs(msg.chat_id_, msg.id_, 1, 'دي لكك هذا سلطاني؟😏🖕🏿', 1, 'md')
 return false
 end
