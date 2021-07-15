@@ -7991,8 +7991,8 @@ Dev_Abs(msg.chat_id_, msg.id_, 1, TXTE, 1, 'md')
 end
 end
 --     Source ALOMDA     --
-if text and text:match("^كول (.*)$") then
-local txt = {string.match(text, "^(كول) (.*)$")}
+if text and text:match("^ااكول (.*)$") then
+local txt = {string.match(text, "^(ااكول) (.*)$")}
 Dev_Abs(msg.chat_id_,0, 1, txt[2], 1, 'md')
 DeleteMessage(msg.chat_id_,{[0] = msg.id_})
 end
