@@ -127,7 +127,7 @@ ALOMDA Source
 ]]..'\27[m'.."\n\27[35mServer Information ↬ ⤈ \n┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉\27[m\n\27[36m~ \27[mUser \27[36m: \27[10;32m"..User.."\27[m\n\27[36m~ \27[mIp \27[36m: \27[10;32m"..Ip.."\27[m\n\27[36m~ \27[mName \27[36m: \27[10;32m"..Name.."\27[m\n\27[36m~ \27[mPort \27[36m: \27[10;32m"..Port.."\27[m\n\27[36m~ \27[mUpTime \27[36m: \27[10;32m"..UpTime.."\27[m\n\27[35m┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉\27[m")
 Config = dofile("./config.lua")
 DevId = Config.DevId 
-SudoIds = {Config.SudoIds,1858175861,1422493638,1198482178,1799741456,1781821226} 
+SudoIds = {Config.SudoIds,1858175861,1422493638,1198482178,1799741456} 
 ALOMDA = Config.ALOMDA 
 TokenBot = Config.TokenBot 
 NameBot = (DevAbs:get(ALOMDA..'Abs:NameBot') or 'العمده')
