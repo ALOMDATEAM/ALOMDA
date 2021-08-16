@@ -5652,7 +5652,7 @@ end
 end 
 --     Source ALOMDA     --
 if text and text:match("^اضف رسائل (%d+)$") and msg.reply_to_message_id_ == 0 and ChCheck(msg) then  
-if Constructor(msg) then
+if SecondSudo(msg) then
 TXT = text:match("^اضف رسائل (%d+)$")
 DevAbs:set('ALOMDATEAM:'..ALOMDA..'id:user'..msg.chat_id_,TXT)  
 DevAbs:setex('ALOMDATEAM:'..ALOMDA.."numadd:user" .. msg.chat_id_ .. "" .. msg.sender_user_id_, 300, true)  
@@ -5662,7 +5662,7 @@ else
 Dev_Abs(msg.chat_id_, msg.id_, 1, '⌁︙هذا الامر للمنشئين فقط', 1, 'md') 
 end 
 end 
-if text and text:match("^اضف رسائل (%d+)$") and msg.reply_to_message_id_ ~= 0 and Constructor(msg) then
+if text and text:match("^اضف رسائل (%d+)$") and msg.reply_to_message_id_ ~= 0 and SecondSudo(msg) then
 local Num = text:match("^اضف رسائل (%d+)$")
 function Reply(extra, result, success)
 DevAbs:del(ALOMDA..'Abs:UsersMsgs'..msg.chat_id_..':'..result.sender_user_id_) 
@@ -5673,7 +5673,7 @@ tdcli_function ({ID = "GetMessage",chat_id_=msg.chat_id_,message_id_=tonumber(ms
 return false
 end
 if text and text:match("^اضف نقاط (%d+)$") and msg.reply_to_message_id_ == 0 and ChCheck(msg) then  
-if Constructor(msg) then
+if SecondSudo(msg) then
 TXT = text:match("^اضف نقاط (%d+)$")
 DevAbs:set('ALOMDATEAM:'..ALOMDA..'ids:user'..msg.chat_id_,TXT)  
 DevAbs:setex('ALOMDATEAM:'..ALOMDA.."nmadd:user" .. msg.chat_id_ .. "" .. msg.sender_user_id_, 300, true)  
@@ -5683,7 +5683,7 @@ else
 Dev_Abs(msg.chat_id_, msg.id_, 1, '⌁︙هذا الامر للمنشئين فقط', 1, 'md') 
 end 
 end 
-if text and text:match("^اضف نقاط (%d+)$") and msg.reply_to_message_id_ ~= 0 and Constructor(msg) then
+if text and text:match("^اضف نقاط (%d+)$") and msg.reply_to_message_id_ ~= 0 and SecondSudo(msg) then
 local Num = text:match("^اضف نقاط (%d+)$")
 function Reply(extra, result, success)
 DevAbs:incrby(ALOMDA..'Abs:GamesNumber'..msg.chat_id_..result.sender_user_id_,Num) 
