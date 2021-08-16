@@ -4315,6 +4315,35 @@ DevAbs:srem(ALOMDA..'Abs:SecondSudo:',user)
 ReplyStatus(msg,user,"Reply","⌁︙تم تنزيله من قائمة المطورين الثانويين")  
 end end
 --     Source ALOMDA     --
+--       Set FimaleSudoBot      --
+if SecondSudo(msg) then
+if text ==('اضف مطوره') or text ==('رفع مطوره') and ChCheck(msg) then
+function sudo_reply(extra, result, success)
+DevAbs:sadd(ALOMDA..'Abs:SudoBot:',result.sender_user_id_)
+ReplyStatus(msg,result.sender_user_id_,"Reply","⌁︙تم رفعها في قائمة المطورين")  
+end 
+if tonumber(tonumber(msg.reply_to_message_id_)) == 0 then
+else
+getMessage(msg.chat_id_, tonumber(msg.reply_to_message_id_),sudo_reply)
+end end 
+if text and (text:match('^اضف مطوره @(.*)') or text:match('^رفع مطوره @(.*)')) and ChCheck(msg) then
+local username = text:match('^اضف مطوره @(.*)') or text:match('^رفع مطوره @(.*)')
+function promreply(extra,result,success)
+if result.id_ then
+DevAbs:sadd(ALOMDA..'Abs:SudoBot:',result.id_)
+ReplyStatus(msg,result.id_,"Reply","⌁︙تم رفعها في قائمة المطورين")  
+else 
+Dev_Abs(msg.chat_id_, msg.id_, 1, '⌁︙*المعرف غير صحيح*', 1, 'md')
+end end 
+resolve_username(username,promreply)
+end
+if text and (text:match('^اضف مطوره (%d+)') or text:match('^رفع مطوره (%d+)')) and ChCheck(msg) then
+local user = text:match('اضف مطوره (%d+)') or text:match('رفع مطوره (%d+)')
+DevAbs:sadd(ALOMDA..'Abs:SudoBot:',user)
+ReplyStatus(msg,user,"Reply","⌁︙تم رفعها في قائمة المطورين")  
+end
+--       Set FimaleSudoBot      --
+--     Source ALOMDA     --
 --       Set SudoBot      --
 if SecondSudo(msg) then
 if text ==('اضف مطور') or text ==('رفع مطور') and ChCheck(msg) then
@@ -4342,6 +4371,34 @@ local user = text:match('اضف مطور (%d+)') or text:match('رفع مطور 
 DevAbs:sadd(ALOMDA..'Abs:SudoBot:',user)
 ReplyStatus(msg,user,"Reply","⌁︙تم رفعه في قائمة المطورين")  
 end
+--     Source ALOMDA     --
+--     Source ALOMDA     --
+--       Rem FimaleSudoBot      --
+if text ==('حذف مطوره') or text ==('تنزيل مطوره') and ChCheck(msg) then
+function prom_reply(extra, result, success)
+DevAbs:srem(ALOMDA..'Abs:SudoBot:',result.sender_user_id_)
+ReplyStatus(msg,result.sender_user_id_,"Reply","⌁︙تم تنزيلها من قائمة المطورين")  
+end 
+if tonumber(tonumber(msg.reply_to_message_id_)) == 0 then
+else
+getMessage(msg.chat_id_, tonumber(msg.reply_to_message_id_),prom_reply)
+end end
+if text and (text:match('^حذف مطوره @(.*)') or text:match('^تنزيل مطوره @(.*)')) and ChCheck(msg) then
+local username = text:match('^حذف مطوره @(.*)') or text:match('^تنزيل مطوره @(.*)')
+function promreply(extra,result,success)
+if result.id_ then
+DevAbs:srem(ALOMDA..'Abs:SudoBot:',result.id_)
+ReplyStatus(msg,result.id_,"Reply","⌁︙تم تنزيلها من قائمة المطورين")  
+else 
+Dev_Abs(msg.chat_id_, msg.id_, 1, '⌁︙*المعرف غير صحيح*', 1, 'md')
+end end 
+resolve_username(username,promreply)
+end
+if text and (text:match('^حذف مطوره (%d+)') or text:match('^تنزيل مطوره (%d+)')) and ChCheck(msg) then
+local user = text:match('حذف مطوره (%d+)') or text:match('تنزيل مطوره (%d+)')
+DevAbs:srem(ALOMDA..'Abs:SudoBot:',user)
+ReplyStatus(msg,user,"Reply","⌁︙تم تنزيلها من قائمة المطورين")  
+end end
 --     Source ALOMDA     --
 --       Rem SudoBot      --
 if text ==('حذف مطور') or text ==('تنزيل مطور') and ChCheck(msg) then
