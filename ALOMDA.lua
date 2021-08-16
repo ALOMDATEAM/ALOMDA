@@ -3486,9 +3486,9 @@ if text == 'بيع نقاطي' and ChCheck(msg) then
 if tonumber((DevAbs:get(ALOMDA..'Abs:GamesNumber'..msg.chat_id_..msg.sender_user_id_) or 0)) == 0 then
 Dev_Abs(msg.chat_id_, msg.id_, 1,'⌁︙لم تربح اي نقطه\n⌁︙ارسل ↫ الالعاب للعب', 1, 'md')
 else
-DevAbs0 = (DevAbs:get(ALOMDA..'Abs:GamesNumber'..msg.chat_id_..msg.sender_user_id_) * 50)
+DevAbs0 = (DevAbs:get(ALOMDA..'Abs:GamesNumber'..msg.chat_id_..msg.sender_user_id_) * 5)
 DevAbs:incrby(ALOMDA..'Abs:UsersMsgs'..msg.chat_id_..':'..msg.sender_user_id_,DevAbs0)
-Dev_Abs(msg.chat_id_, msg.id_, 1,'⌁︙تم بيع '..(DevAbs:get(ALOMDA..'Abs:GamesNumber'..msg.chat_id_..msg.sender_user_id_))..' من نقاطك\n⌁︙كل نقطه تساوي 50 رساله', 'md')
+Dev_Abs(msg.chat_id_, msg.id_, 1,'⌁︙تم بيع '..(DevAbs:get(ALOMDA..'Abs:GamesNumber'..msg.chat_id_..msg.sender_user_id_))..' من نقاطك\n⌁︙كل نقطه تساوي 5 رساله', 'md')
 DevAbs:del(ALOMDA..'Abs:GamesNumber'..msg.chat_id_..msg.sender_user_id_)
 end
 end
